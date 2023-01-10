@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap bundle-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!--Bootstrap js Bundele-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <!--external css-->
+    <link href="login.css" rel="stylesheet">
+    <title>Document</title>
+    <script>
+        function login() {
+            var uname = document.getElementsByClassName("email").value;
+            var pwd = document.getElementsByClassName("pwd1").value;
+            if (uname == '') {
+                alert("please enter email name.");
+            }
+            else if (pwd == '') {
+                alert("enter the password");
+            }
+            else if (pwd.length < 5 && pwd.length > 10) {
+                alert("Password min and max length is 10.");
+            }
+            else {
+                alert("Thank You for Login");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row m-5 no-gutters shadow-lg login">
+            <div class="col-md-6 d-none d-md-block image">
+                <img src="image/user.png" class="img-fluid" />
+            </div>
+            <div class="col-md-6 bg-white p-5">
+                <h4 class="pb-3">Login</h4>
+                <div class="form-style">
+                    <form >
+                        <div class="form-group pb-3">
+                            <input onclick="login()" type="email" placeholder="email" class="form-control email" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group pb-3">
+                            <input onclick="login()" type="password" placeholder="Password" class="form-control pwd1"
+                                id="exampleInputPassword1">
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center"><input name="" type="checkbox" value="" /> <span
+                                    class="pl-2 font-weight-bold">&nbsp; Remember Me</span></div>
+                            <div><a href="#">Forget Password?</a></div>
+                        </div>
+                        <div class="pb-2 ">
+                            <button type="submit" onclick="login()"
+                                class="btn btn-primary w-100 font-weight-bold mt-2">Submit</button>
+                        </div>
+                    </form>
+                    <div class="sideline">OR</div>
+                    <div>
+                        <button type="submit" onclick="login()" class="btn btn-primary w-100 font-weight-bold mt-2"><i
+                                class="fa fa-facebook" aria-hidden="true"></i> Login With Facebook</button>
+                    </div>
+                    <div class="pt-4 text-center">
+                        Do not have Account. <a href="register.html">Sign Up</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
